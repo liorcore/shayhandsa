@@ -1,0 +1,296 @@
+<section id="contact" class="relative py-20 lg:py-32 overflow-hidden" dir="rtl">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-50 via-[#177F75]/10 to-[#177F75]">
+        <div class="absolute inset-0" style="background: radial-gradient(circle at 50% 50%, rgba(23, 127, 117, 0.2) 0%, rgba(23, 127, 117, 0.4) 100%)"></div>
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.25] mix-blend-overlay"></div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-0 w-[800px] h-[800px] bg-[#177F75]/20 rounded-full blur-3xl animate-blob"></div>
+        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#1a9587]/20 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-[#177F75]/15 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="max-w-2xl mx-auto text-center mb-20 reveal-up">
+                <span class="text-white text-xl font-medium mb-4 block">צור קשר</span>
+                <h2 class="text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+                    נשמח לשמוע ממך
+                </h2>
+                <p class="text-white/90 text-lg">השאר הודעה וניצור איתך קשר בהקדם</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                <!-- Contact Form -->
+                <div class="bg-white/20 backdrop-blur-xl p-8 rounded-3xl shadow-2xl reveal-right border border-white/30">
+                    <form class="space-y-6">
+                        <div class="space-y-4">
+                            <div class="relative">
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                                    <i class="fas fa-user text-[#177F75]"></i>
+                                </div>
+                                <input 
+                                    type="text" 
+                                    placeholder="שם מלא" 
+                                    class="w-full px-6 pr-12 py-4 bg-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[#177F75]/50 transition-all text-gray-800 placeholder-gray-500"
+                                >
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                                    <i class="fas fa-phone text-[#177F75]"></i>
+                                </div>
+                                <input 
+                                    type="tel" 
+                                    placeholder="טלפון" 
+                                    class="w-full px-6 pr-12 py-4 bg-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[#177F75]/50 transition-all text-gray-800 placeholder-gray-500"
+                                >
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                                    <i class="fas fa-envelope text-[#177F75]"></i>
+                                </div>
+                                <input 
+                                    type="email" 
+                                    placeholder="דוא״ל" 
+                                    class="w-full px-6 pr-12 py-4 bg-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[#177F75]/50 transition-all text-gray-800 placeholder-gray-500"
+                                >
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute top-4 right-0 flex items-start pr-4 pointer-events-none">
+                                    <i class="fas fa-message text-[#177F75]"></i>
+                                </div>
+                                <textarea 
+                                    placeholder="תוכן ההודעה" 
+                                    rows="4" 
+                                    class="w-full px-6 pr-12 py-4 bg-white rounded-xl focus:outline-none focus:ring-2 focus:ring-[#177F75]/50 transition-all text-gray-800 placeholder-gray-500 resize-none"
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 px-8 bg-[#177F75] text-white rounded-xl hover:shadow-lg hover:shadow-[#177F75]/20 transition-all group font-medium">
+                            <span class="flex items-center justify-center gap-2">
+                                <span>שלח הודעה</span>
+                                <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
+                            </span>
+                        </button>
+
+                        <div class="response-message hidden mt-6 p-4 rounded-lg text-center transition-all duration-300">
+                            <!-- Success Message -->
+                            <div class="success-message hidden">
+                                <div class="flex flex-col items-center gap-4">
+                                    <div class="w-16 h-16 bg-[#177F75]/20 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-check text-[#177F75] text-2xl"></i>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <h4 class="text-xl font-bold text-[#177F75]">תודה על פנייתך!</h4>
+                                        <p class="text-gray-600">הטופס נשלח בהצלחה, ניצור איתך קשר בהקדם</p>
+                                    </div>
+                                    <button onclick="resetForm()" class="mt-4 px-6 py-2 bg-[#177F75] text-white rounded-lg hover:bg-[#1a9587] transition-colors">
+                                        שליחת טופס נוסף
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Error Message -->
+                            <div class="error-message hidden">
+                                <div class="flex flex-col items-center gap-4">
+                                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-exclamation-triangle text-red-500 text-2xl"></i>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <h4 class="text-xl font-bold text-red-500">אופס! משהו השתבש</h4>
+                                        <p class="text-gray-600">אירעה שגיאה בשליחת הטופס, אנא נסה שוב</p>
+                                    </div>
+                                    <button onclick="retrySubmission()" class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                                        נסה שוב
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="lg:pr-10 reveal-left space-y-8">
+                    <!-- Contact Cards - Updated Design -->
+                    <div class="bg-white/15 backdrop-blur-xl p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all group border border-white/30">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white">
+                                    <i class="fas fa-user-tie text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="text-white">
+                                <h3 class="text-xl font-bold mb-1">שאול קטוב</h3>
+                                <p class="text-white/70">מהנדס ראשי</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Card -->
+                    <a href="https://wa.me/972502897406" target="_blank" class="block">
+                        <div class="bg-white/15 backdrop-blur-xl p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all group border border-white/30">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-[#25D366]/20 rounded-xl flex items-center justify-center text-white">
+                                        <i class="fab fa-whatsapp text-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="text-white">
+                                    <h3 class="text-xl font-bold mb-1">WhatsApp</h3>
+                                    <p class="text-white/70">לחץ לשיחה מיידית</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Phone Card -->
+                    <a href="tel:0502897406" class="block">
+                        <div class="bg-white/15 backdrop-blur-xl p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all group border border-white/30">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white">
+                                        <i class="fas fa-phone-volume text-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="text-white">
+                                    <h3 class="text-xl font-bold mb-1">טלפון</h3>
+                                    <p class="text-white/70">050-289-7406</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Email Card -->
+                    <a href="mailto:SHAUL1@GMAIL.COM" class="block">
+                        <div class="bg-white/15 backdrop-blur-xl p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all group border border-white/30">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white">
+                                        <i class="fas fa-envelope-open-text text-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="text-white">
+                                    <h3 class="text-xl font-bold mb-1">דוא״ל</h3>
+                                    <p class="text-white/70">SHAUL1@GMAIL.COM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Location Card with Waze -->
+                    <a href="https://waze.com/ul?q=אילון%206%20ראשון%20לציון" target="_blank" class="block">
+                        <div class="bg-white/15 backdrop-blur-xl p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all group border border-white/30">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white">
+                                        <i class="fas fa-location-dot text-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="text-white">
+                                    <h3 class="text-xl font-bold mb-1">כתובת</h3>
+                                    <p class="text-white/70">אילון 6, ראשל"צ</p>
+                                    <span class="text-sm text-white/60 mt-1 block">לחץ לניווט ב-Waze</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modern Footer -->
+        <footer class="mt-32 border-t border-white/20 pt-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Logo & Description -->
+                <div class="space-y-6">
+                    <img 
+                        src="https://i.ibb.co/ZgjXsC2/SI-LOGO-removebg-preview-1.png"
+                        alt="ש.י הנדסה"
+                        class="w-24 h-24 object-contain brightness-0 invert"
+                    >
+                    <p class="text-white/70 leading-relaxed">
+                        משרד המתמחה במתן שירותי תכנון והיתרי בנייה המיועדים ללקוחות פרטיים, אדריכלים, מעצבים, יזמים וקבלנים.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">ניווט מהיר</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#about" class="text-white/70 hover:text-white transition-colors">אודות</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors">שירותים</a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="text-white/70 hover:text-white transition-colors">פרויקטים</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-white/70 hover:text-white transition-colors">צור קשר</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">פרטי התקשרות</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-white/70">
+                            <i class="fas fa-phone-volume"></i>
+                            <a href="tel:0502897406" class="hover:text-white transition-colors">050-289-7406</a>
+                        </li>
+                        <li class="flex items-center gap-3 text-white/70">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:SHAUL1@GMAIL.COM" class="hover:text-white transition-colors">SHAUL1@GMAIL.COM</a>
+                        </li>
+                        <li class="flex items-center gap-3 text-white/70">
+                            <i class="fas fa-location-dot"></i>
+                            <span>אילון 6, ראשל"צ</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">עקבו אחרינו</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-[#177F75] transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-[#177F75] transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-[#177F75] transition-all">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-16 pt-8 border-t border-white/10">
+                <div class="flex flex-wrap justify-between items-center gap-4">
+                    <p class="text-white/60 text-sm">© 2024 ש.י הנדסה - כל הזכויות שמורות.</p>
+                    <p class="text-white/60 text-sm">
+                        פיתוח ועיצוב: 
+                        <a href="#" class="text-white hover:text-[#1a9587] transition-colors">נאור בר ציון</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute bottom-0 left-0 right-0">
+        <div class="h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+        <div class="h-[2px] mt-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+    </div>
+</section> 
